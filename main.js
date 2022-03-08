@@ -105,7 +105,7 @@ function digits(n) {
         y = y.slice(1)
       }
 
-      z.push(Number(y[i])) // cant push the '-' sign because isNaN
+      z.push(Number(y[i])) 
     }
   }
   return z
