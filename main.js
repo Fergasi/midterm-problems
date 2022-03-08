@@ -181,7 +181,7 @@ function onlyPunchy(titlesArray) {
   let punchyTitles = [];
 
   for (let title of singleExclaimedArray) {
-    if (title.length < 15) {
+    if (title.length < 16) {
       punchyTitles.push(title);
     }
   }
