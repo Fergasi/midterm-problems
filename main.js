@@ -10,14 +10,15 @@ function halfSquare(num) {
 }
 
 function isLong(string) {
-  if (string.length < 15){
-  return false
-  } else
-  return true
+  // if (string.length < 15){
+  // return false
+  // } else
+  // return true
+  return string.length >= 15 ? true : false;
 } 
 
 function exclaim(string) {
-  string = string.replace(/!/g, '')
+  string = string.replaceAll('!', '')
   string = string + '!'
   return string
 }
@@ -172,7 +173,7 @@ function onlyPunchy(titlesArray) {
   let singleExclaimedArray = [];
 
   for (let title of titlesArray){
-    let singleExclaimedTitle = title.replace(/!/g, '') + '!';
+    let singleExclaimedTitle = title.replaceAll('!', '') + '!';
     singleExclaimedArray.push(singleExclaimedTitle)
   }
 
