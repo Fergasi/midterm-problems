@@ -10,12 +10,16 @@ function halfSquare(num) {
 }
 
 function isLong(string) {
-  // if (string.length < 15){
+  return string.length >= 15 ? true : false;
+} 
+
+//Alternative method:
+
+// if (string.length < 15){
   // return false
   // } else
   // return true
-  return string.length >= 15 ? true : false;
-} 
+// }
 
 function exclaim(string) {
   string = string.replaceAll('!', '')
@@ -133,6 +137,7 @@ function truncate(string) {
 }
 
 function isValidPassword(password) {
+
   upperAnswer = false;
   lowerAnswer = false;
   digitsAnswer = false;
@@ -166,8 +171,22 @@ function isValidPassword(password) {
   }
 }
 
+//Alternative method:
+
+//   if (
+//     containsDigit(password) && 
+//     containsLowerCase(password) && 
+//     containsUpperCase(password) && 
+//     containsNonAlphanumeric(password) && 
+//     !containsSpace(password)
+//     ) {
+//     return true
+//   } else
+//   return false
+// }
+
 function onlyPunchy(titlesArray) {
-  
+
    // replace all exclaimation marks with single exclaimation mark, for each item in the input array, and push to new array 
 
   let singleExclaimedArray = [];
@@ -190,6 +209,16 @@ function onlyPunchy(titlesArray) {
   return punchyTitles;
 }
 
+// Alternative method:
+
+// for (let i = 0; i < titlesArray.length; i++){
+//   titlesArray[i] = exclaim(titlesArray[i])
+//   if (isLong(titlesArray[i]) === true){
+//     titlesArray.splice(i, 1)
+//   }
+// }
+// return titlesArray
+// }
 
 module.exports = {
   isEvenlyDivisible,
